@@ -38,7 +38,7 @@ section {
 .about,
 .services,
 .skills,
-.teams,
+.project,
 .contact,
 footer {
   font-family: 'Poppins', sans-serif;
@@ -261,11 +261,23 @@ section .title::after {
   background: none;
 }
 
-/* teams section styling */
-.teams .title::after {
-  content: 'project have workon';
+/* project section styling */
+.project {
+  color: #fff;
+  background: #111;
 }
-.teams .carousel .card {
+.project .title::before {
+  background: #fff;
+}
+.project .title::after {
+  background: #111;
+  content: 'Projects have worked on';
+}
+
+.project .title::after {
+  content: 'who with me';
+}
+.project .carousel .card {
   background: #222;
   border-radius: 6px;
   padding: 25px 35px;
@@ -273,25 +285,25 @@ section .title::after {
   overflow: hidden;
   transition: all 0.3s ease;
 }
-.teams .carousel .card:hover {
+.project .carousel .card:hover {
   background: crimson;
 }
-.teams .carousel .card .box {
+.project .carousel .card .box {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
 }
-.teams .carousel .card:hover .box {
+.project .carousel .card:hover .box {
   transform: scale(1.05);
 }
-.teams .carousel .card .text {
+.project .carousel .card .text {
   font-size: 25px;
   font-weight: 500;
   margin: 10px 0 7px 0;
 }
-.teams .carousel .card img {
+.project .carousel .card img {
   height: 150px;
   width: 150px;
   object-fit: cover;
@@ -299,7 +311,7 @@ section .title::after {
   border: 5px solid crimson;
   transition: all 0.3s ease;
 }
-.teams .carousel .card:hover img {
+.project .carousel .card:hover img {
   border-color: #fff;
 }
 .owl-dots {
