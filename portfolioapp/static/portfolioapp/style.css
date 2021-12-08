@@ -271,11 +271,11 @@ section .title::after {
 }
 .project .title::after {
   background: #111;
-  content: 'Projects have worked on';
+  content: 'project have work on';
 }
 
 .project .title::after {
-  content: 'who with me';
+  content: 'project have work on';
 }
 .project .carousel .card {
   background: #222;
