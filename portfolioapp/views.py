@@ -5,9 +5,6 @@ def index(request):
     return render(request, 'portfolioapp/index.html')
 
 
-    from django.shortcuts import render, redirect
-from django.core.mail import send_mail
-
 # Create your views here.
 # from django.shortcuts import render, redirect
 # from django.core.mail import send_mail
@@ -15,8 +12,6 @@ from django.core.mail import send_mail
 # from django.contrib import messages
 # from .forms import ContactForm
 
-def index(request):
-    return render(request, 'portfolioapp/index.html')
 
 
 # def contact(request):
