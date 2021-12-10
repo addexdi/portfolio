@@ -40,7 +40,7 @@
                 <div class="text-1">Hello, my name is</div>
                 <div class="text-2">Olamilekan Azeez</div>
                 <div class="text-3">And I'm a <span class="typing"></span></div>
-                <a href="#">Hire me</a>
+                <a href="#contact">Hire me</a>
             </div>
         </div>
     </section>
@@ -72,21 +72,27 @@
                     <div class="box">
                         <img src="{% static 'portfolioapp/images/ola.jpg' %}" alt="">
                         <div class="text">Devconnect</div>
-                        <p>This project is about creating a media platform where people in tech coukd meet and connect with each other.</p>
+                        <p>This project is about creating a platform where people in tech could meet, help one another and connect with each other.</p>
+                        <a href="#contact">View Project</a>
+                        <a href="#contact"><i class="fas fa-code-branch"></i></a>
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
                         <img src="{% static 'portfolioapp/images/ola.jpg' %}" alt="">
-                        <div class="text">Someone name</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="text">Todo App</div>
+                        <p>This project is about creating a platform where people in tech could meet, help one another and connect with each other.</p>
+                        <a href="#contact">View Project</a>
+                        <a href="#contact"><i class="fas fa-code-branch"></i></a>
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
                         <img src="{% static 'portfolioapp/images/ola.jpg' %}" alt="">
-                        <div class="text">Someone name</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="text">ContactList</div>
+                        <p>This project is about creating a platform where people in tech could meet, help one another and connect with each other.</p>
+                        <a href="#contact">View Project</a>
+                        <a href="#contact"><i class="fas fa-code-branch"></i></a>
                     </div>
                 </div>
             </div>
@@ -100,7 +106,7 @@
             <div class="contact-content">
                 <div class="column left">
                     <div class="text">Get in Touch</div>
-                    <p>Hello, you can get intouch with me by filling the form. Thanks</p>
+                    <p>Hello, you can get in touch with me by filling the form or send a mail to my email. Thanks</p>
                     <div class="icons">
                         <div class="row">
                             <i class="fas fa-user"></i>
@@ -123,24 +129,37 @@
                                 <div class="sub-title">devolamilekan@gmail.com</div>
                             </div>
                         </div>
+                        <div class="row">
+                            <i class="fab fa-github"></i>
+                            <div class="info">
+                                <div class="head">Github</div>
+                                <div class="sub-title"><a href="https://github.com/Azeezdot123">Azeezdot123</a></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="column right">
                     <div class="text">Message me</div>
-                    <form action="#">
+                    {% if messages %}
+                        {% for m in messages %}
+                            <strong><h4 style="color: black">{{ m }}</h4></strong>
+                        {% endfor %}
+                    {% endif %}
+                    <form action="" method="POST">
+                        {% csrf_token %}
                         <div class="fields">
                             <div class="field name">
-                                <input type="text" placeholder="Name" required>
+                                <input type="text" name="name" placeholder="Name" required>
                             </div>
                             <div class="field email">
-                                <input type="email" placeholder="Email" required>
+                                <input type="email" name="email" placeholder="Email" required>
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" placeholder="Subject" required>
+                            <input type="text" name="subject" placeholder="Subject" required>
                         </div>
                         <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
+                            <textarea cols="30" rows="10" name="content" placeholder="Message.." required></textarea>
                         </div>
                         <div class="button-area">
                             <button type="submit">Send message</button>
@@ -153,7 +172,7 @@
 
     <!-- footer section start -->
     <footer>
-        <span>Created By <a href="">Olamilekan</a> | <span class="far fa-copyright"></span> 2021 All rights reserved.</span>
+        <span>Created By <a href="https://github.com/Azeezdot123">Olamilekan</a> | <span class="far fa-copyright"></span> 2021 All rights reserved.</span>
     </footer>
 
     <script src="{% static 'portfolioapp/script.js' %}"></script>
