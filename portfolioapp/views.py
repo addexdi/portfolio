@@ -16,6 +16,7 @@ def index(request):
     send_mail(subject, content, settings.EMAIL_HOST_USER, [recipient], fail_silently = False)
     messages.success(request, 'Thanks for contacting me ')
 
+
 # Sending the user a confirmation email
     if content == content:
         subject = 'Thanks for Contacting Me'
