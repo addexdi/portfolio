@@ -398,7 +398,7 @@ section .title::after {
 }
 
 .teams .title::after {
-  content: 'project have work on';
+  content: 'work on';
 }
 .teams .carousel .card {
   background: #222;
